@@ -4,13 +4,13 @@
 #
 # build commands (starting from this directory)
 # cd ../build
-# cmake .. "-DCMAKE_TOOLCHAIN_FILE=C:\vcpkg\scripts\buildsystems\vcpkg.cmake" 
+# cmake .. "-DCMAKE_TOOLCHAIN_FILE=C:\vcpkg\scripts\buildsystems\vcpkg.cmake"
 # cmake --build .
 
 cmake_minimum_required(VERSION 3.0)
 project(test)
 
-find_package(SQLite3 REQUIRED)
+find_package(sqlite3 CONFIG REQUIRED)
 
 add_executable(sqlite-demo sqlite-demo.cpp)
 target_link_libraries(sqlite-demo sqlite3)
