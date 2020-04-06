@@ -12,5 +12,5 @@ project(test)
 
 find_package(Sqlite3 REQUIRED)
 
-add_executable(sqlite-demo main.cpp)
+add_executable(sqlite-demo sqlite-demo.cpp)
 target_link_libraries(sqlite-demo sqlite3)
