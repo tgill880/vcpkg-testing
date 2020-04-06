@@ -1,2 +1,3 @@
 # vcpkg-testing
-Test vcpkg prgrams for different platforms
+Simple test vcpkg programs to see what works on different platforms.
+
