@@ -10,7 +10,7 @@
 cmake_minimum_required(VERSION 3.0)
 project(test)
 
-find_package(Sqlite3 REQUIRED)
+find_package(SQLite3 REQUIRED)
 
 add_executable(sqlite-demo sqlite-demo.cpp)
 target_link_libraries(sqlite-demo sqlite3)
