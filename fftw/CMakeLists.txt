@@ -3,7 +3,7 @@
 # https://github.com/microsoft/vcpkg/blob/master/docs/examples/installing-and-using-packages.md
 # fftw3f added to original demo
 #
-# package installations
+# package installations (Windows)
 # vcpkg install sqlite3:x64-windows
 # vcpkg install fftw3:x64-windows
 #
@@ -12,8 +12,12 @@
 # cmake .. "-DCMAKE_TOOLCHAIN_FILE=C:\vcpkg\scripts\buildsystems\vcpkg.cmake"
 # cmake --build .
 
-cmake_minimum_required(VERSION 3.0)
-project(test)
+cmake_minimum_required(VERSION 3.13)
+project(test VERSION 1.0 LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+# see Professional CMake, Ch 15.1
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(fftw-demo fftw-demo.cpp)
 add_executable(fftw-iostream fftw-demo-iostream.cpp)
