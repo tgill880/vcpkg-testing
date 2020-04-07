@@ -2,7 +2,7 @@
  * Microsoft demo application to install and use SQLite package using vcpkg and CMake.
  * https://github.com/microsoft/vcpkg/blob/master/docs/examples/installing-and-using-packages.md
  * Program altered to include fftw3f
- * <iostream> version
+ * <iostream> version with argc and argv
  * 
  * Thurman Gillespy
  * 2020-04-07
@@ -12,7 +12,7 @@
 #include <fftw3.h>
 #include <iostream>
 
-int main()
+int main(int argc, char* argv[])
 {
     fftw_plan plan;
     fftw_complex* in = nullptr;
