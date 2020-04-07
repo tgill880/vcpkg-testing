@@ -16,11 +16,14 @@ cmake_minimum_required(VERSION 3.0)
 project(test)
 
 add_executable(fftw-demo fftw-demo.cpp)
+add_executable(fftw-iostream fftw-demo-iostream.cpp)
 
 find_package(sqlite3 CONFIG REQUIRED)
 # options: FFTW3, FFTW3f, FFTW3l
 find_package(FFTW3f CONFIG REQUIRED)
 
 target_link_libraries(fftw-demo PRIVATE sqlite3)
+target_link_libraries(fftw-iostream PRIVATE sqlite3)
 # lower case must match above uppcase (FFTW3f => fftw3f, etc)
 target_link_libraries(fftw-demo PRIVATE FFTW3::fftw3f)
+target_link_libraries(fftw-iostream PRIVATE FFTW3::fftw3f)
