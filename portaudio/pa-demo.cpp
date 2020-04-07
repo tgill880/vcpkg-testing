@@ -17,7 +17,7 @@ int main(int argc, char* argv[])
         std::cout << "Pa_Initialize failed.\n";
         return 1;
     }
-    std::cout << "PortAudio simple demo\n";
+    std::cout << "PortAudio simple demo.\n";
     std::cout << "Version: " << Pa_GetVersionText() << std::endl;
     std::cout << "Number of devices: " << ((int)Pa_GetDeviceCount()) << std::endl;
     Pa_Terminate();
