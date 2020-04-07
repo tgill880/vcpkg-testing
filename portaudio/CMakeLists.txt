@@ -28,3 +28,9 @@ target_link_libraries( pa-demo
         portaudio
         portaudio_static
 )
+
+# not needed, but added for testing
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
+
+target_link_libraries ( pa-demo PRIVATE Threads::Threads )
